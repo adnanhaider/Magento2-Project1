@@ -1,0 +1,46 @@
+<?php
+$blockObj= $block->getLayout()->createBlock('Adnan\UIGrid\Block\System\Index');
+$info = $blockObj->getHelperData();
+// var_dump($info);die();
+// $info = json_decode($info);
+$ranges = json_decode($info['ranges'], true);
+// foreach($ranges as $range){
+//   var_dump($range);
+// }
+// die();
+
+?>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th scope="col">#</th> -->
+      <th scope="col">Module Enable</th>
+      <th scope="col">Custom Label</th>
+      <th scope="col">Languages</th>
+      <th scope="col">Ranges</th>
+      <th scope="col">First language</th>
+      <th scope="col">Pakistani</th>
+      <th scope="col">Textarea example</th>
+      <th scope="col">Checkbox</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><?php echo $info['enable'] ?></td>
+      <td><?php echo $info['custom_label'] ?></td>
+      <td><?php echo $info['languages'] ?></td>
+      <td>
+        <?php foreach($ranges as $range){ 
+          echo "From => ".$range["from_qty"]." To => ".$range["to_qty"];
+          }
+        ?>
+      </td>
+      
+      <td><?php echo $info['first_language'] ?></td>
+      <td><?php echo $info['pakistani'] ?></td>
+      <td><?php echo $info['textarea_example'] ?></td>
+      <td><?php echo $info['checkbox'] ?></td>
+        
+    </tr>
+  </tbody>
+</table>

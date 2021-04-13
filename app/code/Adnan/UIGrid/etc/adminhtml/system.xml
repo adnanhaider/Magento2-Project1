@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="custom_tab_id" translate="label" sortOrder="10">
+            <label>My Configurations</label>
+        </tab>
+        <section id="custom_section_id" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Custom</label>
+            <tab>custom_tab_id</tab>
+            <resource>Adnan_UIGrid::custom_section_id_config</resource> <!-- Mageplaza_HelloWorld::helloworld_config -->
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Custom label</label>
+                    <comment>Custom comment</comment>
+                </field>
+                <field id="first_language" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First language</label>
+                    <source_model>Adnan\UIGrid\Model\Config\Source\Custom</source_model>
+                </field>
+                <field id="pakistani" translate="label" type="checkbox" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pakistani?</label>
+                    <frontend_model>Adnan\UIGrid\Block\System\Config\Checkbox</frontend_model>
+                </field>
+                 <field id="languages" translate="label" type="editablemultiselect" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Languages</label>
+                    <source_model>Adnan\UIGrid\Model\Config\Source\Custom</source_model>
+                    <comment>Use CTRL for multiselect</comment>
+                </field>
+                <field id="textarea_example" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Textarea example</label>
+                </field>
+
+                <field id="checkbox" translate="label" type="checkbox"  sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Checkbox</label>
+                    <frontend_model>Adnan\UIGrid\Block\System\Config\Checkbox</frontend_model>
+                </field>
+                <field id="ranges" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ranges</label>
+                    <frontend_model>Adnan\UIGrid\Block\Adminhtml\Form\Field\Ranges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

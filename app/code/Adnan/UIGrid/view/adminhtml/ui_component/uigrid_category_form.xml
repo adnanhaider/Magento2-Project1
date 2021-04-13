@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">uigrid_category_form.uigrid_category_form_data_source</item>
+            <item name="deps" xsi:type="string">uigrid_category_form.uigrid_category_form_data_source</item>
+        </item>
+        <!-- BUTTON STARTS HERE -->
+       <!-- <item name="buttons" xsi:type="array">
+            <item name="button-unique-identifier-here" xsi:type="string">Adnan\UIGrid\Block\Adminhtml\Item\Add\Button\SaveButton</item>
+        </item> -->
+        <!-- BUTTON ENDS HERE -->
+        <item name="label" xsi:type="string" translate="true">Employee Information</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">uigrid_uigrid_add</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+
+           <item name="buttons" xsi:type="array">
+                <!-- <item name="back" xsi:type="string">RH\UiExample\Block\Adminhtml\Index\Edit\Button\Back</item>
+                <item name="delete" xsi:type="string">RH\UiExample\Block\Adminhtml\Index\Edit\Button\Delete</item>
+                <item name="reset" xsi:type="string">RH\UiExample\Block\Adminhtml\Index\Edit\Button\Reset</item> -->
+                <item name="save" xsi:type="string">Adnan\UIGrid\Block\Adminhtml\Item\Add\Button\SaveButton</item>
+            </item>
+    </argument>
+    <!-- <settings>
+        <buttons>
+            <button name="save_and_continue" class="Magento\Customer\Block\Adminhtml\Edit\SaveAndContinueButton"/>
+            <button name="save" class="Magento\Customer\Block\Adminhtml\Edit\SaveButton"/>
+            <button name="reset" class="Magento\Customer\Block\Adminhtml\Edit\ResetButton"/>
+            <button name="order" class="Magento\Customer\Block\Adminhtml\Edit\OrderButton"/>
+            <button name="resetPassword" class="Magento\Customer\Block\Adminhtml\Edit\ResetPasswordButton"/>
+            <button name="unlock" class="Magento\Customer\Block\Adminhtml\Edit\UnlockButton"/>
+            <button name="invalidateToken" class="Magento\Customer\Block\Adminhtml\Edit\InvalidateTokenButton"/>
+            <button name="delete" class="Magento\Customer\Block\Adminhtml\Edit\DeleteButton"/>
+            <button name="back" class="Magento\Customer\Block\Adminhtml\Edit\BackButton"/>
+        </buttons>
+    </settings> -->
+
+ 
+    
+    <dataSource name="uigrid_category_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Adnan\UIGrid\Model\Item\DataProvider</argument>
+            <argument name="name" xsi:type="string">uigrid_category_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+                <item name="submit_url" xsi:type="url" path="uigrid/grid/save"/>
+            </item>
+        </argument>
+        
+
+    </dataSource>
+    <fieldset name="id">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <!-- <item name="collapsible" xsi:type="boolean">true</item> -->
+                <item name="label" xsi:type="string" translate="true">Fill Form</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+       
+        <field name="name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Name</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">adnan_moduleone_item</item>
+                    <item name="dataScope" xsi:type="string">name</item>
+                </item>
+            </argument>
+        </field>
+        <field name="email">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Email</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">adnan_moduleone_item</item>
+                    <item name="dataScope" xsi:type="string">email</item>
+                </item>
+            </argument>
+        </field>
+        <field name="telephone">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Developer Telephone</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">adnan_moduleone_item</item>
+                    <item name="dataScope" xsi:type="string">telephone</item>
+
+                </item>
+            </argument>
+        </field>
+        <field name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Description</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">adnan_moduleone_item</item>
+                    <item name="dataScope" xsi:type="string">description</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+    
+</form>

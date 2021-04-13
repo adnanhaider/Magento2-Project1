@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+ <type name="Adnan\Grid\Ui\DataProvider\Category\ListingDataProvider">
+   <plugin name="Grid_attributes" type="Adnan\Grid\Plugin\AddAttributesToUiDataProvider"/>
+ </type>
+ <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+  <arguments>
+   <argument name="collections" xsi:type="array">
+     <item name="Grid_category_listing_data_source" xsi:type="string">AdnanGridCategoryCollection</item>
+   </argument>
+  </arguments>
+ </type>
+ <virtualType name="AdnanGridCategoryCollection" type="Adnan\Grid\Ui\DataProvider\Category\Listing\Collection">
+   <arguments>
+     <argument name="mainTable" xsi:type="string">adnan_moduleone_item</argument>
+     <argument name="resourceModel" xsi:type="string">Adnan\Grid\Model\ResourceModel\Item</argument>
+   </arguments>
+ </virtualType>
+</config>

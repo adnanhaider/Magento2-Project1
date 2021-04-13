@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Adnan_UIGrid::home" title="UIGrid" module="Adnan_UIGrid" sortOrder="1000" parent="Magento_Catalog::catalog_categories" resource="Magento_Catalog::categories" action="uigrid/grid/index"/>
+        <add id="Adnan_UIGrid::main" title="New Option" module="Adnan_UIGrid" sortOrder="1000"  resource="Magento_Backend::admin" action="uigrid/grid/index"/>
+    </menu>
+</config>

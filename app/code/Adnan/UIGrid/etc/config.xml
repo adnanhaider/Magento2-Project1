@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <custom_section_id>
+            <general>
+                <enable>1</enable>
+                <custom_label>It is a default value</custom_label>
+                <languages>English</languages>
+                <ranges>1-2</ranges>
+                <first_language>Urdu</first_language>
+                <pakistani>1</pakistani>
+                <textarea_example>This is an example for text area</textarea_example>
+                <checkbox>1</checkbox>
+                <custom_checkboxes>1</custom_checkboxes>
+            </general>
+        </custom_section_id>
+    </default>
+</config>

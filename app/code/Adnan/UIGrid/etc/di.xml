@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="uigrid_category_listing_data_source" xsi:type="string">Adnan\UIGrid\Model\ResourceModel\Item\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Adnan\UIGrid\Model\ResourceModel\Item\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">adnan_moduleone_item</argument>
+            <argument name="resourceModel" xsi:type="string">Adnan\UIGrid\Model\ResourceModel\Item</argument>
+        </arguments>
+    </virtualType>
+</config>
