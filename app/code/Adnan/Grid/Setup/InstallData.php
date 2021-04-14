@@ -25,5 +25,6 @@ class InstallData implements InstallDataInterface
 		];
 		$post = $this->_itemFactory->create();
 		$post->addData($data)->save();
+		// new 
 	}
 }
