@@ -48,13 +48,12 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         $collection = $this->_productCollectionFactory->create()->addAttributeToSelect('*');
         $data = $collection->getData();
-
+        die($data);
         foreach ($data as $product) {
             $oldQty = $this->stock->getStockItem($product['entity_id'])->getQty();
             $newQty = $this->stock->getStockItem($product['entity_id'])->setData('qty', $oldQty + 10);
             $newQty->save();
-            die($oldQty);
+            // die($oldQty);
         }
-     
     }
 }

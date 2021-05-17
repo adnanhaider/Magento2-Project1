@@ -12,4 +12,7 @@
             <argument name="resourceModel" xsi:type="string">Adnan\UIGrid\Model\ResourceModel\Item</argument>
         </arguments>
     </virtualType>
+    <type name="\Magento\Checkout\Controller\Onepage\Success">
+      <plugin name="saveOrderPlugin" type="\Adnan\UIGrid\Plugin\SaveOrderPlugin" sortOrder="1" disabled="false" />
+    </type>
 </config>

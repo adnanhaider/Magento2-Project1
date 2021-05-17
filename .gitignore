@@ -73,6 +73,6 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
-vendor/
-var
+/vendor
+/var
 # End of https://www.toptal.com/developers/gitignore/api/magento2
