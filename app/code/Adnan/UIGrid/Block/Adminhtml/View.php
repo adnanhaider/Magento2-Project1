@@ -5,7 +5,7 @@ use Magento\Backend\Block\Template;
 
 class View extends Template
 {
-   public $_template = 'Adnan_UIGrid::view.phtml';
+   public $_template = 'Aureatelabs_Grid::view.phtml';
 
      public function __construct(
        \Magento\Backend\Block\Template\Context $context

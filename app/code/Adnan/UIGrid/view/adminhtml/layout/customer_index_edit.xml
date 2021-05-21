@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_form">
+            <block class="Adnan\UIGrid\Block\Adminhtml\Customeredit\Tab\View" name="customertab_panel">
+                <arguments>
+                    <argument name="tab_label" xsi:type="string" translate="true">Activity Log</argument>
+                    <argument name="sort_order" xsi:type="number">100</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

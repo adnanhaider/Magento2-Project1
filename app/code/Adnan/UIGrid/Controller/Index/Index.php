@@ -46,6 +46,7 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute(): Page
     {
+        // echo 'hello';
         $collection = $this->_productCollectionFactory->create()->addAttributeToSelect('*');
         $data = $collection->getData();
         die($data);

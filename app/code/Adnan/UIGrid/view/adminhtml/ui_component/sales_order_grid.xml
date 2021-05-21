@@ -18,12 +18,13 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="ViewAction" class = "Adnan\UIGrid\Ui\DataProvider\Category\Component\Listing\Column\ViewAction">
+
+        <actionsColumn name="entity_id" class="Adnan\UIGrid\Ui\DataProvider\Category\Component\Listing\Column\ViewAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="resizeEnabled" xsi:type="boolean">false</item>
-                    <item name="resizeDefaultWidth" xsi:type="string">107</item>
-                    <item name="indexField" xsi:type="string">id</item>
+                <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                <item name="viewUrlPath" xsi:type="string">adnan/uigrid/view</item>
+                <item name="urlEntityParamName" xsi:type="string">id</item>
                 </item>
             </argument>
         </actionsColumn>
