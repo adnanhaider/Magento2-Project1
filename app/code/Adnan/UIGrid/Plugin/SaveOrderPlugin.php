@@ -39,9 +39,9 @@ class SaveOrderPlugin {
         $this->order = $order;
     }
 
-    public function afterExecute(\Magento\Checkout\Controller\Onepage\Success\Interceptor $subject)
+    public function afterExecute( \Magento\Checkout\Controller\Onepage\Success\Interceptor $subject)
     {
-        $order = $observer->getEvent()->getOrder();
+        $order = $this->getEvent()->getOrder();
         $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();        
         $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
         $store_id = $storeManager->getStore()->getStoreId();

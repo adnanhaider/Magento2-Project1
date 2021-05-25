@@ -1,0 +1,26 @@
+
+<?php $collection = $block->get_Data();?>
+<?php if($collection){?>
+<div class="fieldset-wrapper customer-information">
+    <div class="fieldset-wrapper-title">
+        <span class="title"><?php echo __('Activity Log Information') ?></span>
+    </div>
+    <table class="admin__table-secondary">
+        <tbody>
+        <tr>
+            <th><?php echo __('Customer Email:') ?></th>
+            <td><b><?php echo $collection[0]['customer_email']; ?></b></td>
+        </tr>
+            <?php foreach($collection as $data){?>
+                <?php $prodData =  $block->getOrderedProducts($data['order_id']); ?>
+                <tr onclick="alert('<?= $prodData ?>')">
+                    <th><?php echo __('Increment Id :') ?></th>
+                    <td><?php echo $block->get_inc_id($data['order_id']); ?></td>
+                    <th><?php echo __('Created At :') ?></th>
+                    <td><?php echo $data['created_at'] ?></td>
+                </tr>
+            <?php }?>
+        </tbody>
+    </table>
+</div>
+<?php }?>
